@@ -91,5 +91,15 @@ public class Otter implements Animal {
         System.out.println(name + " is doing nothing...");
         energy -= 2;
     }
+
+    /**
+     * Displays the current status of the penguin, including its name, health, energy, and happiness.
+     */
+    public void displayStatus() {
+        System.out.println("Name: " + name);
+        System.out.println("Health: " + health);
+        System.out.println("Energy: " + energy);
+        System.out.println("Happiness: " + happiness);
+    }
 }
 
