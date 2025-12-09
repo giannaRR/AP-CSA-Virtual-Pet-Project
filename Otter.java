@@ -18,11 +18,11 @@ public class Otter implements Animal {
     /**
      * Makes the otter eat, increasing energy and health.
      */
-    public Otter(String name) {
+    public Otter(String name, int health, int energy, int happiness) {
         this.name = name;
-        this.health = 100;
-        this.energy = 100;
-        this.happiness = 100;
+        this.health = health;
+        this.energy = energy;
+        this.happiness = happiness;
     }
 
     /**
