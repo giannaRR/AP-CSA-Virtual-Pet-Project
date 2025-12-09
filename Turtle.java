@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Represents a pet turtle with various attributes and behaviors.
  */
-public class turtle {
+public class Turtle {
     /**
      * The health level of the turtle.
      */
@@ -90,4 +90,5 @@ public class turtle {
         System.out.println("Happiness Level: " + happinessLevel); // Use happinessLevel
     }
 }
+
 
