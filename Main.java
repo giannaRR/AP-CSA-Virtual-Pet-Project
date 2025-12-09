@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Main class for the Virtual Pet Simulator.
  */
 public class main {
-    public static void main(String[] args) {
+    public static void Main(String[] args) {
         // Create a Scanner object for user input
         Scanner input = new Scanner(System.in);
 
