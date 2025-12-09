@@ -92,6 +92,4 @@ public class Otter implements Animal {
         energy -= 2;
     }
 }
-}
->>>>>>> e3d600ec5b22c1017c473d225b1bc042b17e77a8
 
