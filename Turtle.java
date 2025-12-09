@@ -9,7 +9,7 @@ import java.util.Random;
 /**
  * Represents a pet turtle with various attributes and behaviors.
  */
-public class turtle implements Animal {
+public class Turtle implements Animal {
     /**
      * The health level of the turtle.
      */
@@ -38,7 +38,7 @@ public class turtle implements Animal {
      * @param name           The name of the turtle.
      * @param happinessLevel The happiness level of the turtle.
      */
-    public turtle(int healthLevel, int energyLevel, String name, int happinessLevel) {
+    public Turtle(int healthLevel, int energyLevel, String name, int happinessLevel) {
         this.healthLevel = healthLevel;
         this.energyLevel = energyLevel;
         this.name = name;
@@ -110,3 +110,4 @@ public class turtle implements Animal {
         System.out.println("Happiness Level: " + happinessLevel);
     }
 }
+
