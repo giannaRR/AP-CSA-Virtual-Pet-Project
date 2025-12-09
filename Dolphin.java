@@ -12,7 +12,7 @@ import java.util.Random;
  * such as eating, sleeping, swimming, playing, and doing nothing
  */
 
-public class dolphin implements Animal {
+public class Dolphin implements Animal {
     // instance variables
     // health level of the dolphin
     private int health;
@@ -194,3 +194,4 @@ public class dolphin implements Animal {
         System.out.println("Happiness Level: " + happiness);
     }
 }
+
