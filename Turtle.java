@@ -1,4 +1,4 @@
-/** 
+/**
  * @Author Allison Ly
  * @Collaborator CoPilot
  * @Date 2025-12-09
@@ -92,17 +92,16 @@ public class Turtle implements Animal {
         happinessLevel += 20;
     }
 
-
     /**
-     * Simulates the turtle hiding in its shell. 
-     * This action increases the turtle's energy but decreases its happiness slightly.
+     * Simulates the turtle hiding in its shell.
+     * Increases energy slightly but decreases happiness.
      */
     public void hideInShell() {
-        System.out.println(name + " is hiding in its shell.");
-        energyLevel += 10; // Hiding restores energy
-        happinessLevel -= 5; // Hiding reduces happiness slightly
+        System.out.println(name + " retreats into its shell for safety.");
+        energyLevel += 5;
+        happinessLevel -= 5;
     }
-    
+
     /**
      * Simulates the turtle doing nothing. Prints a message indicating no action is taken.
      */
