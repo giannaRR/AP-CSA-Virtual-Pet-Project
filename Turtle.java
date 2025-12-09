@@ -1,7 +1,7 @@
 /** 
  * @Author Allison Ly
- *  @Collaborator CoPilot
- * @Date 2025-12-09
+ * @Collaborator CoPilot
+ * @version 2025-12-09
  */
 import java.util.Random;
 
@@ -12,12 +12,12 @@ public class Turtle {
     /**
      * The health level of the turtle.
      */
-    private final int healthLevel;
+    private final int health;
 
     /**
      * The energy level of the turtle.
      */
-    private int energyLevel;
+    private int energy;
 
     /**
      * The name of the turtle.
@@ -27,21 +27,21 @@ public class Turtle {
     /**
      * The happiness level of the turtle.
      */
-    private int happinessLevel;
+    private int happiness;
 
     /**
      * Constructs a new Turtle with the specified attributes.
      *
-     * @param healthLevel    The health level of the turtle.
-     * @param energyLevel    The energy level of the turtle.
+     * @param health    The health level of the turtle.
+     * @param energy    The energy level of the turtle.
      * @param name           The name of the turtle.
-     * @param happinessLevel The happiness level of the turtle.
+     * @param happiness The happiness level of the turtle.
      */
-    public turtle(int healthLevel, int energyLevel, String name, int happinessLevel) {
-        this.healthLevel = healthLevel;
-        this.energyLevel = energyLevel;
+    public Turtle(String name, int health, int energy, int happiness) {
         this.name = name;
-        this.happinessLevel = happinessLevel;
+        this.health = health;
+        this.energy = energy;
+        this.happiness = happiness;
     }
 
     /**
@@ -51,8 +51,8 @@ public class Turtle {
      */
     public void eat(String food) {
         System.out.println(name + " is eating " + food + ".");
-        energyLevel += 10; // Use energyLevel
-        happinessLevel += 5; // Use happinessLevel
+        energy += 10; // Use energyLevel
+        happiness += 5; // Use happinessLevel
     }
 
     /**
@@ -60,8 +60,8 @@ public class Turtle {
      */
     public void sleep() {
         System.out.println(name + " is sleeping.");
-        energyLevel += 20; // Use energyLevel
-        happinessLevel += 2; // Use happinessLevel
+        energy += 20; // Use energyLevel
+        happiness += 2; // Use happinessLevel
     }
 
     /**
@@ -70,13 +70,13 @@ public class Turtle {
      */
     public void swim() {
         System.out.println(name + " is swimming.");
-        energyLevel -= 10; // Use energyLevel
-        happinessLevel += 15; // Use happinessLevel
+        energy -= 10; // Use energyLevel
+        happiness += 15; // Use happinessLevel
 
         Random random = new Random();
         if (random.nextBoolean()) {
             System.out.println(name + " found a treasure while swimming!");
-            happinessLevel += 10; // Use happinessLevel
+            happiness += 10; // Use happinessLevel
         }
     }
 
@@ -85,9 +85,9 @@ public class Turtle {
      */
     public void displayStatus() {
         System.out.println("Name: " + name);
-        System.out.println("Health Level: " + healthLevel); // Use healthLevel
-        System.out.println("Energy Level: " + energyLevel); // Use energyLevel
-        System.out.println("Happiness Level: " + happinessLevel); // Use happinessLevel
+        System.out.println("Health Level: " + health); // Use healthLevel
+        System.out.println("Energy Level: " + energy); // Use energyLevel
+        System.out.println("Happiness Level: " + happiness); // Use happinessLevel
     }
 }
 
