@@ -1,6 +1,8 @@
-/** @Collaborator CoPilot
+/** 
+ * @Author Allison Ly
+ *  @Collaborator CoPilot
+ * @Date 2025-12-09
  */
-
 import java.util.Random;
 
 /**
@@ -88,3 +90,4 @@ public class turtle {
         System.out.println("Happiness Level: " + happinessLevel); // Use happinessLevel
     }
 }
+
