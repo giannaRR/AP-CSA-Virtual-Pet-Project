@@ -2,9 +2,9 @@
  * The Penguin class represents a penguin with specific attributes and behaviors.
  * It implements the Animal interface and provides methods for various actions
  * such as eating, sleeping, and playing.
- * @author Gianna Rodriguez
+ * @Author Gianna Rodriguez
  * @Collaborators: Copilot
- * @version 12/8/2025
+ * @Date 12/8/2025
  */
 public class Penguin implements Animal {
     // Instance variables
@@ -90,3 +90,4 @@ public class Penguin implements Animal {
         System.out.println("Happiness: " + happiness);
     }
 }
+
