@@ -10,4 +10,6 @@ What users can expect when they run it:
 What makes your program unique:
 What makes it unique is the Under the Sea theme and unique attributes to each individual animal. 
 The animals can perform different tricks or activities, providing the user engagement and entertainment. 
-This program is catered towards a younger audience, primarily elementary school students, but anyone can interact with it.
+
+
+Target Audience: This program is catered towards a younger audience, primarily elementary school students.
