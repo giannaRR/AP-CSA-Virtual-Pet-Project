@@ -3,8 +3,8 @@ import java.util.Scanner;
 /**
  * Main class for the Virtual Pet Simulator.
  */
-public class main {
-    public static void Main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
         // Create a Scanner object for user input
         Scanner input = new Scanner(System.in);
 
@@ -21,8 +21,37 @@ public class main {
             System.out.println("You have chosen a Turtle! 🐢");
             System.out.println("What do you want to name your turtle?");
             String turtleName = input.nextLine();
-            Turtle turtlePet = new Turtle(turtleName, 100, 100, 100);
-            
+            Turtle turtlePet = new Turtle(100, 100, turtleName, 100);
+            while (turtlePet.getHealth() >0 && turtlePet.getEnergy() >0 && turtleName.getHappiness() >75){
+                menuTurtle();
+                int turtleChoice = input.nextInt();
+
+                if (turtleChoice == 1){
+                    turtlePet.eat();
+                }
+                else if (turtleChoice == 2){
+                    turtlePet.sleep();
+                }
+                else if (turtleChoice == 3){
+                    turtlePet.play();
+                }
+                else if (turtleChoice == 4){
+                    turtlePet.swim();
+                }
+                else if (turtleChoice == 5){
+                    turtlePet.hideInShell();
+                }
+                else if (turtleChoice == 6){
+                    turtlePet.nothing();
+                }
+                else if (turtleChoice == 7){
+                    System.out.println("Thank you for playing the Virtual Pet Simulator! Goodbye!");
+                    break;
+                }
+                else {
+                    System.out.println("Invalid choice. Please choose a valid option.");
+                }
+            }
 
         }
         else if (choice == 2){
@@ -53,7 +82,5 @@ public class main {
         System.out.println("5. Hide in shell 🐢");
         System.out.println("6. Do Nothing 😐");
         System.out.println("7. Exit ❌");
-    
-        
     }
 }
