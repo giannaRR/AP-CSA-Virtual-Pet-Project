@@ -18,11 +18,11 @@ public class Otter implements Animal {
     /**
      * Makes the otter eat, increasing energy and health.
      */
-    public Otter(String name) {
+    public Otter(String name, int health, int energy, int happiness) {
         this.name = name;
-        this.health = 100;
-        this.energy = 100;
-        this.happiness = 100;
+        this.health = health;
+        this.energy = energy;
+        this.happiness = happiness;
     }
 
     /**
@@ -91,7 +91,11 @@ public class Otter implements Animal {
         System.out.println(name + " is doing nothing...");
         energy -= 2;
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 9f0d222719bccdc133eb766d2110eb17957a2709
     /**
      * Displays the current status of the penguin, including its name, health, energy, and happiness.
      */
@@ -101,4 +105,9 @@ public class Otter implements Animal {
         System.out.println("Energy: " + energy);
         System.out.println("Happiness: " + happiness);
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 9f0d222719bccdc133eb766d2110eb17957a2709
