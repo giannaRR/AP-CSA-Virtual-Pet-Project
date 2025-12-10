@@ -10,25 +10,10 @@ import java.util.Random;
  * Represents a pet turtle with various attributes and behaviors.
  */
 public class Turtle implements Animal {
-    /**
-     * The health level of the turtle.
-     */
-    private final int health;
-
-    /**
-     * The energy level of the turtle.
-     */
+    private int health;
     private int energy;
-
-    /**
-     * The name of the turtle.
-     */
-    private final String name;  
-
-    /**
-     * The happiness level of the turtle.
-     */
     private int happiness;
+    private String name;
 
     /**
      * Constructs a new Turtle with the specified attributes.
@@ -45,6 +30,18 @@ public class Turtle implements Animal {
         this.happiness = happiness;
     }
 
+    /**
+     * Constructs an Otter with the given name and initializes its attributes.
+     *
+     * @param name The name of the otter.
+     */
+    public Otter(String name) {
+        this.name = name;
+        this.health = 100;
+        this.energy = 100;
+        this.happiness = 100;
+    }
+    
     /**
      * Simulates the turtle eating. Increases energy and happiness levels.
      */
@@ -97,7 +94,8 @@ public class Turtle implements Animal {
      * Simulates the turtle hiding in its shell. 
      * This action increases the turtle's energy but decreases its happiness slightly.
      */
-    public void hideInShell() {
+    @Override
+    public void uniqueBehavior() {
         System.out.println(name + " is hiding in its shell.");
         energy += 10; // Hiding restores energy
         happiness -= 5; // Hiding reduces happiness slightly
@@ -186,3 +184,4 @@ public class Turtle implements Animal {
         System.out.println("Happiness Level: " + happiness);
     }
 }
+
