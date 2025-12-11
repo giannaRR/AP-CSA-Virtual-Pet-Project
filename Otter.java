@@ -2,10 +2,10 @@
  * The Otter class represents a virtual pet otter with attributes for health,
  * energy, and happiness. It provides methods to simulate various actions
  * the otter can perform, such as eating, sleeping, playing, swimming, and doing nothing.
- *
+ * 
  * @author Kayla To
  * @collaborators Copilot
- * @version 12/8/25
+ * @version 12/11/25
  */
 public class Otter implements Animal {
     // Attributes of the Otter
@@ -13,10 +13,10 @@ public class Otter implements Animal {
     private int energy;
     private int happiness;
     private String name;
-   
+    
     /**
     * Constructs an Otter with the specified attributes.
-    *
+    * 
     * @param health The initial health of the otter.
     * @param energy The initial energy of the otter.
     * @param happiness The initial happiness of the otter.
@@ -29,10 +29,9 @@ public class Otter implements Animal {
         this.name = name;
     }
 
-
     /**
      * Constructs an Otter with the given name and initializes its attributes.
-     *
+     * 
      * @param name The name of the otter.
      */
     public Otter(String name) {
@@ -41,8 +40,6 @@ public class Otter implements Animal {
         this.energy = 100;
         this.happiness = 100;
     }
-
-
 
 
     /**
@@ -55,7 +52,6 @@ public class Otter implements Animal {
         health += 5;
     }
 
-
     /**
      * Makes the otter sleep, increasing energy and happiness.
      */
@@ -66,7 +62,6 @@ public class Otter implements Animal {
         happiness += 5;
     }
 
-
     /**
      * Makes the otter play, increasing happiness but decreasing energy.
      */
@@ -76,7 +71,6 @@ public class Otter implements Animal {
         energy -= 15;
         happiness += 20;
     }
-
 
     /**
      * Makes the otter swim, with a chance of finding a friend or getting injured.
@@ -96,7 +90,6 @@ public class Otter implements Animal {
         }
     }
 
-
     /**
      * Makes the otter do nothing, slightly decreasing energy.
      */
@@ -105,7 +98,6 @@ public class Otter implements Animal {
         System.out.println(name + " is doing nothing...");
         energy -= 2;
     }
-
 
     /**
      * Makes the otter hangout with family, increasing happiness but decreasing energy.
@@ -116,5 +108,46 @@ public class Otter implements Animal {
         happiness += 15;
         energy -= 5;
     }
-}
 
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+    
+    public int getEnergy() {
+        return energy;
+    }
+    
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+    
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public void setHappiness(int happiness) {
+        this.happiness = happiness;
+    }
+    
+    /**
+     * Displays the current status of the turtle, including its name, health, energy, and happiness levels.
+     */
+    public void displayStatus() {
+        System.out.println("Name: " + name);
+        System.out.println("Health Level: " + health);
+        System.out.println("Energy Level: " + energy);
+        System.out.println("Happiness Level: " + happiness);
+    }
+}
