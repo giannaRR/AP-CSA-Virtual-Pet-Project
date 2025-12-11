@@ -6,7 +6,8 @@ Players can choose, interact with pets, manage their needs, and watch how their 
 
 
 What users can expect when they run it: When users hit run the user is expected to type their input to interact with the program.
-A print statement will pop up, asking , "Would you like to adopt a pet?" , "What animal would you like to adopt?", and "What would you like to name it?".
+A print statement will pop up, asking ,"Welcome to the Virtual Pet Simulator!• 🌊˖°𓇼⋆🐋🐚 𓈒𓏸"); , "🌟 Which pet would you like to choose? (1-4) 🌟"?"
+There is a variety of animals to choose from!
 
 
 What makes your program unique:
