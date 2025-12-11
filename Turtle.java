@@ -80,7 +80,7 @@ public class Turtle implements Animal {
         System.out.println(name + " is swimming.");
         int random = (int)(Math.random() * (2-1+1) + 1);
         if (random == 0){
-            System.out.println(name + " found treasure!");
+            System.out.println(name + " found a friend while swimming!");
             happiness += 15;
         }
         if (random == 1){
