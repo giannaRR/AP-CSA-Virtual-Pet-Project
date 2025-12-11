@@ -39,7 +39,7 @@ public class Main {
                     turtlePet.swim();
                 }
                 else if (turtleChoice == 5){
-                    turtlePet.hideInShell();
+                    turtlePet.uniqueBehavior();
                 }
                 else if (turtleChoice == 6){
                     turtlePet.nothing();
