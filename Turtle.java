@@ -1,86 +1,69 @@
-/** 
- * @Author Allison Ly
- * @Collaborator CoPilot
- * @Date 2025-12-09
- */
-
-import java.util.Random;
-
 /**
- * Represents a pet turtle with various attributes and behaviors.
+ * The Turtle class represents a pet turtle with attributes such as health, energy, happiness, and name.
+ * It implements the Animal interface and provides methods to simulate various behaviors of the turtle.
+ * 
+ * @author Allison Ly
+ * @collaborators Copilot
+ * @version 12/11/25
  */
+
 public class Turtle implements Animal {
+    // Attributes of the Turtle
     private int health;
     private int energy;
     private int happiness;
     private String name;
-
+    
     /**
-     * Constructs a new Turtle with the specified attributes.
-     *
-     * @param health    The health level of the turtle.
-     * @param energy   The energy level of the turtle.
-     * @param name           The name of the turtle.
-     * @param happiness The happiness level of the turtle.
-     */
-    public Turtle(int health, int energy, String name, int happiness) {
+    * Constructs an Turtle with the specified attributes.
+    * 
+    * @param health The initial health of the turtle.
+    * @param energy The initial energy of the turtle.
+    * @param happiness The initial happiness of the turtle.
+    * @param name The name of the turtle.
+    */
+    public Turtle(int health, int energy, int happiness, String name) {
         this.health = health;
         this.energy = energy;
-        this.name = name;
         this.happiness = happiness;
+        this.name = name;
     }
 
     /**
-     * Constructs an Otter with the given name and initializes its attributes.
-     *
-     * @param name The name of the otter.
+     * Constructs an Turtle with the given name and initializes its attributes.
+     * 
+     * @param name The name of the turtle.
      */
-    public Otter(String name) {
+    public Turtle(String name) {
         this.name = name;
         this.health = 100;
         this.energy = 100;
         this.happiness = 100;
     }
+
     
     /**
-     * Simulates the turtle eating. Increases energy and happiness levels.
+     * Makes the otter eat, increasing energy and health.
      */
     @Override
     public void eat() {
         System.out.println(name + " is eating.");
         energy += 10;
-        happiness += 5;
+        health += 5;
     }
 
     /**
-     * Simulates the turtle sleeping. Restores energy and slightly increases happiness.
+     * Makes the otter sleep, increasing energy and happiness.
      */
     @Override
     public void sleep() {
         System.out.println(name + " is sleeping.");
         energy += 20;
-        happiness += 2;
+        happiness += 5;
     }
 
     /**
-     * Simulates the turtle swimming. Decreases energy but increases happiness.
-     * There is a random chance the turtle finds a treasure while swimming.
-     */
-    @Override
-    public void swim() {
-        System.out.println(name + " is swimming.");
-        energy -= 10;
-        happiness += 15;
-
-        Random random = new Random();
-        if (random.nextBoolean()) {
-            System.out.println(name + " found a treasure while swimming!");
-            happiness += 10;
-        }
-    }
-
-    /**
-     * Simulates the turtle playing. Decreases energy but significantly increases happiness.
+     * Makes the otter play, increasing happiness but decreasing energy.
      */
     @Override
     public void play() {
@@ -89,6 +72,32 @@ public class Turtle implements Animal {
         happiness += 20;
     }
 
+    /**
+     * Makes the otter swim, with a chance of finding a friend or getting injured.
+     */
+    @Override
+    public void swim() {
+        System.out.println(name + " is swimming.");
+        int random = (int)(Math.random() * (2-1+1) + 1);
+        if (random == 0){
+            System.out.println(name + " found treasure!");
+            happiness += 15;
+        }
+        if (random == 1){
+            System.out.println(name + " injured itself while swimming.");
+            health -= 15;
+            happiness -= 10;
+        }
+    }
+
+    /**
+     * Makes the otter do nothing, slightly decreasing energy.
+     */
+    @Override
+    public void nothing() {
+        System.out.println(name + " is doing nothing...");
+        energy -= 2;
+    }
 
     /**
      * Simulates the turtle hiding in its shell. 
@@ -101,78 +110,38 @@ public class Turtle implements Animal {
         happiness -= 5; // Hiding reduces happiness slightly
     }
     
-    /**
-     * Simulates the turtle doing nothing. Prints a message indicating no action is taken.
-     */
-    @Override
-    public void nothing() {
-        System.out.println(name + " is doing nothing.");
-    }
-
-    /**
-     * Gets the turtle's name.
-     * @return The name of the turtle.
-     */
+    
     public String getName() {
         return name;
     }
-
-    /**
-     * Sets the turtle's name.
-     * @param name The new name of the turtle.
-     */
+    
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * Gets the turtle's health level.
-     * @return The health level of the turtle.
-     */
     public int getHealth() {
         return health;
     }
 
-    /**
-     * Sets the turtle's health level.
-     * @param health The new health level of the turtle.
-     */
     public void setHealth(int health) {
         this.health = health;
     }
-
-    /**
-     * Gets the turtle's energy level.
-     * @return The energy level of the turtle.
-     */
+    
     public int getEnergy() {
         return energy;
     }
-
-    /**
-     * Sets the turtle's energy level.
-     * @param energy The new energy level of the turtle.
-     */
+    
     public void setEnergy(int energy) {
         this.energy = energy;
     }
-
-    /**
-     * Gets the turtle's happiness level.
-     * @return The happiness level of the turtle.
-     */
+    
     public int getHappiness() {
         return happiness;
     }
 
-    /**
-     * Sets the turtle's happiness level.
-     * @param happiness The new happiness level of the turtle.
-     */
     public void setHappiness(int happiness) {
         this.happiness = happiness;
     }
-
     
     /**
      * Displays the current status of the turtle, including its name, health, energy, and happiness levels.
