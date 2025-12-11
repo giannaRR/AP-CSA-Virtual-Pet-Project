@@ -22,7 +22,7 @@ public class Main {
             System.out.println("What do you want to name your turtle?");
             String turtleName = input.nextLine();
             Turtle turtlePet = new Turtle(100, 100, turtleName, 100);
-            while (turtlePet.getHealth() >0 && turtlePet.getEnergy() >0 && turtleName.getHappiness() >75){
+            while (turtlePet.getHealth() >0 && turtlePet.getEnergy() >0 && turtlePet.getHappiness() >75){
                 menuTurtle();
                 int turtleChoice = input.nextInt();
 
@@ -72,6 +72,24 @@ public class Main {
 
        
     }
+
+    public static Animal createPet(String petType, String petName){
+        switch (petType){
+            case "Turtle":
+                return new Turtle(100, 100, petName, 100);
+            case "Dolphin":
+                return new Dolphin(100, 100, petName, 100);
+            case "Penguin":
+                return new Penguin(petName, 100, 100, 100);
+            case "Otter":
+                return new Otter(petName, 100, 100, 100);
+            default:
+                return null;
+        }
+    }
+
+
+
 
     public static void menuTurtle(){
         System.out.println("What would you like to do with your pet?");
