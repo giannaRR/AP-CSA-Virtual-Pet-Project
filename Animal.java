@@ -4,4 +4,5 @@ public interface Animal {
     public void swim();
     public void play();
     public void nothing();
+    public void uniqueBehavior();
 }
