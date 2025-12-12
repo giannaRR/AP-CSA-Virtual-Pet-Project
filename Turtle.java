@@ -43,7 +43,7 @@ public class Turtle implements Animal {
 
     
     /**
-     * Makes the otter eat, increasing energy and health.
+     * Makes the turtle eat, increasing energy and health.
      */
     @Override
     public void eat() {
@@ -53,7 +53,7 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the otter sleep, increasing energy and happiness.
+     * Makes the turtle sleep, increasing energy and happiness.
      */
     @Override
     public void sleep() {
@@ -63,7 +63,7 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the otter play, increasing happiness but decreasing energy.
+     * Makes the turtle play, increasing happiness but decreasing energy.
      */
     @Override
     public void play() {
@@ -73,7 +73,7 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the otter swim, with a chance of finding a friend or getting injured.
+     * Makes the turtle swim, with a chance of finding a friend or getting injured.
      */
     @Override
     public void swim() {
@@ -91,7 +91,7 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the otter do nothing, slightly decreasing energy.
+     * Makes the turtle do nothing, slightly decreasing energy.
      */
     @Override
     public void nothing() {
@@ -153,4 +153,5 @@ public class Turtle implements Animal {
         System.out.println("Happiness Level: " + happiness);
     }
 }
+
 
