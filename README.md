@@ -26,7 +26,7 @@ The animals can perform different tricks or activities, providing the user engag
 
 
 
-
+Known Bugs: We've encountered several issues moving our code from VSCode to Github and merging our branches with our main method 
 
 
 Class Diagram File:
