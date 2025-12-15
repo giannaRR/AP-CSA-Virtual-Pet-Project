@@ -1,5 +1,3 @@
-import java.util.Random;
-
 /**
  * The Otter class represents a virtual pet otter with attributes for health,
  * energy, and happiness. It provides methods to simulate various actions
@@ -7,16 +5,34 @@ import java.util.Random;
  * 
  * @author Kayla To
  * @collaborators Copilot
- * @version 12/8/25
+ * @version 12/11/25
  */
 public class Otter implements Animal {
+    // Attributes of the Otter
     private int health;
     private int energy;
     private int happiness;
     private String name;
+    
+    /**
+     * Constructs a new Otter object with the specified name, health, energy, and happiness.
+     *
+     * @param name      name of the penguin.
+     * @param health    initial health level of the penguin.
+     * @param energy    initial energy level of the penguin.
+     * @param happiness initial happiness level of the penguin.
+     */
+    public Otter(int health, int energy, int happiness, String name) {
+        this.health = health;
+        this.energy = energy;
+        this.happiness = happiness;
+        this.name = name;
+    }
 
     /**
-     * Makes the otter eat, increasing energy and health.
+     * Constructs an Otter with the given name and initializes its attributes.
+     * 
+     * @param name The name of the otter.
      */
     public Otter(String name) {
         this.name = name;
@@ -25,14 +41,6 @@ public class Otter implements Animal {
         this.happiness = 100;
     }
 
-    /**
-     * Makes the otter hangout with family, increasing happiness but decreasing energy.
-     */
-    public void familyTime() {
-        System.out.println(name + " is spending time with family.");
-        happiness += 15;
-        energy -= 5;
-    }
 
     /**
      * Makes the otter eat, increasing energy and health.
@@ -66,13 +74,12 @@ public class Otter implements Animal {
      */
     public void swim() {
         System.out.println(name + " is swimming.");
-        Random rand = new Random();
-        int n = rand.nextInt(2); 
-        if (n == 0){
+        int random = (int)(Math.random() * (2-1+1) + 1);
+        if (random == 0){
             System.out.println(name + " found a friend while swimming!");
             happiness += 15;
         }
-        if (n == 1){
+        if (random == 1){
             System.out.println(name + " injured itself while swimming.");
             health -= 15;
             happiness -= 10;
@@ -86,54 +93,45 @@ public class Otter implements Animal {
         System.out.println(name + " is doing nothing...");
         energy -= 2;
     }
+
+    /**
+     * Makes the otter hangout with family, increasing happiness but decreasing energy.
+     */
+    public void uniqueBehavior() {
+        System.out.println(name + " is spending time with family.");
+        happiness += 15;
+        energy -= 5;
+    }
+    
+    /**
+     * Displays the current status of the turtle, including its name, health, energy, and happiness levels.
+     */
+    public void displayStatus() {
+        System.out.println("Name: " + name);
+        System.out.println("Health Level: " + health);
+        System.out.println("Energy Level: " + energy);
+        System.out.println("Happiness Level: " + happiness);
+    }
+    
+    /**
+     * Returns the health of the turtle.
+     */
+    public int getHealth() {
+        return health;
+    }
+    
+    /**
+     * Returns the energy of the turtle.
+     */
+    public int getEnergy() {
+        return energy;
+    }
+    
+    /**
+     * Returns the happiness of the turtle.
+     */
+    public int getHappiness() {
+        return happiness;
+    }
+
 }
-=======
-public class Otter implements Animal {
-    private int health;
-    private int energy;
-    private int happiness;
-    private String name;
-
-    public Otter(String name) {
-        this.name = name;
-        this.health = 100;
-        this.energy = 100;
-        this.happiness = 100;
-    }
-
-    @Override
-    public void eat() {
-        System.out.println(name + " is eating.");
-        energy += 10;
-        health += 5;
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println(name + " is sleeping.");
-        energy += 20;
-        happiness += 5;
-    }
-
-    @Override
-    public void play() {
-        System.out.println(name + " is playing.");
-        energy -= 15;
-        happiness += 20;
-    }
-
-    @Override
-    public void swim() {
-        System.out.println(name + " is swimming.");
-        energy -= 10;
-        happiness += 10;
-    }
-
-    @Override
-    public void nothing() {
-        System.out.println(name + " is doing nothing...");
-        // maybe energy slowly regenerates
-        energy += 2;
-    }
-}
->>>>>>> e3d600ec5b22c1017c473d225b1bc042b17e77a8
