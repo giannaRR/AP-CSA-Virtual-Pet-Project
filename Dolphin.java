@@ -111,35 +111,24 @@ public class Dolphin implements Animal {
         System.out.println("Happiness Level: " + happiness);
     }
     
+    /**
+     * Returns the health of the turtle.
+     */
     public int getHealth() {
         return health;
     }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
+    
+    /**
+     * Returns the energy of the turtle.
+     */
     public int getEnergy() {
         return energy;
     }
-
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
-
+    
+    /**
+     * Returns the happiness of the turtle.
+     */
     public int getHappiness() {
         return happiness;
-    }
-
-    public void setHappiness(int happiness) {
-        this.happiness = happiness;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
