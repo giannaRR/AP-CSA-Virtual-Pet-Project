@@ -1,10 +1,10 @@
 # Project Title: Under the Sea - Virtual Pet Simulator 
 # Team Members: Allison Ly  , Elena Koleva  , Gianna Rodriguez , Kayla To
 Team Member Roles:
--Allison Ly (Lead Programmer)
--Elena Koleva (Project Manager)
--Gianna Rodriguez (Quality Assurance Tester)
--Kayla To (Technical Writer)
+* Allison Ly (Lead Programmer)
+* Elena Koleva (Project Manager)
+* Gianna Rodriguez (Quality Assurance Tester)
+* Kayla To (Technical Writer)
 
 Under the Sea – Virtual Pet Simulator is an interactive program where users can adopt, care for, and play with unique marine animals. Catered towards elementary school students, the program encourages creativity and responsibility as players manage their pet’s energy, health, and happiness. Each pet species includes special actions and animations that make the experience fun, engaging, and customizable. Players can monitor their pet’s well-being and choose actions such as playing, sleeping, eating, swimming, or even performing species-specific tricks. The way players care for their pet affects overall stats, offering a simple but rewarding simulation environment.
 
