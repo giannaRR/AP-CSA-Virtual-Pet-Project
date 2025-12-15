@@ -15,13 +15,13 @@ public class Otter implements Animal {
     private String name;
     
     /**
-    * Constructs an Otter with the specified attributes.
-    * 
-    * @param health The initial health of the otter.
-    * @param energy The initial energy of the otter.
-    * @param happiness The initial happiness of the otter.
-    * @param name The name of the otter.
-    */
+     * Constructs a new Otter object with the specified name, health, energy, and happiness.
+     *
+     * @param name      name of the penguin.
+     * @param health    initial health level of the penguin.
+     * @param energy    initial energy level of the penguin.
+     * @param happiness initial happiness level of the penguin.
+     */
     public Otter(int health, int energy, int happiness, String name) {
         this.health = health;
         this.energy = energy;
@@ -45,7 +45,6 @@ public class Otter implements Animal {
     /**
      * Makes the otter eat, increasing energy and health.
      */
-    @Override
     public void eat() {
         System.out.println(name + " is eating.");
         energy += 10;
@@ -55,7 +54,6 @@ public class Otter implements Animal {
     /**
      * Makes the otter sleep, increasing energy and happiness.
      */
-    @Override
     public void sleep() {
         System.out.println(name + " is sleeping.");
         energy += 20;
@@ -65,7 +63,6 @@ public class Otter implements Animal {
     /**
      * Makes the otter play, increasing happiness but decreasing energy.
      */
-    @Override
     public void play() {
         System.out.println(name + " is playing.");
         energy -= 15;
@@ -75,7 +72,6 @@ public class Otter implements Animal {
     /**
      * Makes the otter swim, with a chance of finding a friend or getting injured.
      */
-    @Override
     public void swim() {
         System.out.println(name + " is swimming.");
         int random = (int)(Math.random() * (2-1+1) + 1);
@@ -93,7 +89,6 @@ public class Otter implements Animal {
     /**
      * Makes the otter do nothing, slightly decreasing energy.
      */
-    @Override
     public void nothing() {
         System.out.println(name + " is doing nothing...");
         energy -= 2;
@@ -102,43 +97,10 @@ public class Otter implements Animal {
     /**
      * Makes the otter hangout with family, increasing happiness but decreasing energy.
      */
-    @Override
     public void uniqueBehavior() {
         System.out.println(name + " is spending time with family.");
         happiness += 15;
         energy -= 5;
-    }
-
-    public String getName() {
-        return name;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-    
-    public int getEnergy() {
-        return energy;
-    }
-    
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
-    
-    public int getHappiness() {
-        return happiness;
-    }
-
-    public void setHappiness(int happiness) {
-        this.happiness = happiness;
     }
     
     /**
@@ -150,4 +112,26 @@ public class Otter implements Animal {
         System.out.println("Energy Level: " + energy);
         System.out.println("Happiness Level: " + happiness);
     }
+    
+    /**
+     * Returns the health of the turtle.
+     */
+    public int getHealth() {
+        return health;
+    }
+    
+    /**
+     * Returns the energy of the turtle.
+     */
+    public int getEnergy() {
+        return energy;
+    }
+    
+    /**
+     * Returns the happiness of the turtle.
+     */
+    public int getHappiness() {
+        return happiness;
+    }
+
 }
