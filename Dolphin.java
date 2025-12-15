@@ -1,26 +1,17 @@
 /**
- * @@Author: Elena Koleva
- * @Date: 12-09-2025
- * @Collaborator: Copilot
- */
-
-import java.util.Random;
-
-/**
  * The dolphin class represents a dolphin with attributes for health, energy,
  * happiness, and name. It implements the animal interface to define behaviors
  * such as eating, sleeping, swimming, playing, and doing nothing
+ * 
+ * @author Elena Koleva
+ * @version 12/12/25
+ * @collaborator Copilot
  */
-
 public class Dolphin implements Animal {
-    // instance variables
-    // health level of the dolphin
+    // Attributes of the Dolphin
     private int health;
-    // level of the dolphin's energy
     private int energy;
-    // level of the dolphin's happiness
     private int happiness;
-    // name of the dolphin
     private String name;
 
     /**
@@ -31,93 +22,29 @@ public class Dolphin implements Animal {
      * @param happinessLevel initial happiness level of the dolphin
      * @param dolphinName    name of the dolphin
      */
-    public dolphin(int health, int energy, int happiness, String name) {
+    public Dolphin(int health, int energy, int happiness, String name) {
         this.health = health;
         this.energy = energy;
         this.happiness = happiness;
         this.name = name;
     }
-
-    // getters and setters
-
+    
     /**
-     * gets the health level of the dolphin.
+     * Constructs an Otter with the given name and initializes its attributes.
      * 
-     * @return current health level.
+     * @param name The name of the otter.
      */
-    public int getHealth() {
-        return health;
-    }
-
-    /**
-     * sets the health level of the dolphin.
-     * 
-     * @param health new health level.
-     */
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    /**
-     * gets the energy level of the dolphin.
-     * 
-     * @return current energy level.
-     */
-    public int getEnergy() {
-        return energy;
-    }
-
-    /**
-     * sets the energy level of the dolphin.
-     * 
-     * @param energy new energy level.
-     */
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
-
-    /**
-     * gets the happiness level of the dolphin.
-     * 
-     * @return current happiness level.
-     */
-    public int getHappiness() {
-        return happiness;
-    }
-
-    /**
-     * sets the happiness level of the dolphin.
-     * 
-     * @param happiness new happiness level.
-     */
-    public void setHappiness(int happiness) {
-        this.happiness = happiness;
-    }
-
-    /**
-     * gets the name of the dolphin.
-     * 
-     * @return dolphin's name.
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * sets the name of the dolphin.
-     * 
-     * @param name new name for the dolphin.
-     */
-    public void setName(String name) {
+    public Dolphin(String name) {
         this.name = name;
+        this.health = 100;
+        this.energy = 100;
+        this.happiness = 100;
     }
-
-    // methods
-
+    
+    
     /**
-     * dolphin swims, decreasing energy and increasing happiness
+     * Dolphin swims, decreasing energy and increasing happiness
      */
-    @Override
     public void swim() {
         System.out.println(name + " is swimming!");
         energy -= 10;
@@ -125,9 +52,8 @@ public class Dolphin implements Animal {
     }
 
     /**
-     * dolphin eats, increasing energy and health
+     * Dolphin eats, increasing energy and health
      */
-    @Override
     public void eat() {
         System.out.println(name + " is eating!");
         energy += 20;
@@ -135,9 +61,8 @@ public class Dolphin implements Animal {
     }
 
     /**
-     * dolphin plays, decreasing energy and increasing happiness
+     * Dolphin plays, decreasing energy and increasing happiness
      */
-    @Override
     public void play() {
         System.out.println(name + " is playing!");
         energy -= 15;
@@ -145,9 +70,8 @@ public class Dolphin implements Animal {
     }
 
     /**
-     * dolphin sleeps, restoring energy and slightly increasing health
+     * Dolphin sleeps, restoring energy and slightly increasing health
      */
-    @Override
     public void sleep() {
         System.out.println(name + " is sleeping!");
         energy += 30;
@@ -155,37 +79,30 @@ public class Dolphin implements Animal {
     }
 
     /**
-     * dolphin does nothing, no changes to attributes
+     * Dolphin does nothing, no changes to attributes
      */
-    @Override
     public void nothing() {
         System.out.println(name + " is doing nothing.");
     }
 
     /**
-     * dolphin makes a sound
+     * Dolphin does a flip, increasing happiness but with a chance of injury
      */
-    public void makeSound() {
-        System.out.println(name + " says: Click-click!");
-    }
-
-    /**
-     * dolphin does a flip, increasing happiness but with a chance of injury
-     */
-    public void doFlip() {
+    public void uniqueBehavior() {
         System.out.println(name + " is doing a flip!");
         happiness += 15;
         energy -= 20;
 
-        Random random = new Random();
-        if (random.nextInt(100) < 10) { // 10% chance to get injured
+        int random = (int)(Math.random()*(10-1+1)+1);
+        if (random == 1) { // 10% chance to get injured
             System.out.println(name + " got injured while doing a flip!");
             health -= 20;
         }
     }
-
+    
+    
     /**
-     * displays the current status of the dolphin
+     * Displays the current status of the dolphin
      */
     public void displayStatus() {
         System.out.println("Dolphin Name: " + name);
@@ -193,5 +110,36 @@ public class Dolphin implements Animal {
         System.out.println("Energy Level: " + energy);
         System.out.println("Happiness Level: " + happiness);
     }
-}
+    
+    public int getHealth() {
+        return health;
+    }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public void setHappiness(int happiness) {
+        this.happiness = happiness;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
