@@ -43,9 +43,9 @@ public class Turtle implements Animal {
 
     
     /**
-     * Makes the turtle eat, increasing energy and health.
+     * Makes the otter eat, increasing energy and health.
      */
-    @Override
+
     public void eat() {
         System.out.println(name + " is eating.");
         energy += 10;
@@ -53,9 +53,9 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the turtle sleep, increasing energy and happiness.
+     * Makes the otter sleep, increasing energy and happiness.
      */
-    @Override
+
     public void sleep() {
         System.out.println(name + " is sleeping.");
         energy += 20;
@@ -63,9 +63,9 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the turtle play, increasing happiness but decreasing energy.
+     * Makes the otter play, increasing happiness but decreasing energy.
      */
-    @Override
+
     public void play() {
         System.out.println(name + " is playing.");
         energy -= 15;
@@ -73,9 +73,9 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the turtle swim, with a chance of finding a friend or getting injured.
+     * Makes the otter swim, with a chance of finding a friend or getting injured.
      */
-    @Override
+
     public void swim() {
         System.out.println(name + " is swimming.");
         int random = (int)(Math.random() * (2-1+1) + 1);
@@ -91,56 +91,23 @@ public class Turtle implements Animal {
     }
 
     /**
-     * Makes the turtle do nothing, slightly decreasing energy.
+     * Makes the otter do nothing, slightly decreasing energy.
      */
-    @Override
+
     public void nothing() {
         System.out.println(name + " is doing nothing...");
-        energy -= 2;
+        energy -= 10;
     }
 
     /**
      * Simulates the turtle hiding in its shell. 
      * This action increases the turtle's energy but decreases its happiness slightly.
      */
-    @Override
+
     public void uniqueBehavior() {
         System.out.println(name + " is hiding in its shell.");
         energy += 10; // Hiding restores energy
         happiness -= 5; // Hiding reduces happiness slightly
-    }
-    
-    
-    public String getName() {
-        return name;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-    
-    public int getEnergy() {
-        return energy;
-    }
-    
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
-    
-    public int getHappiness() {
-        return happiness;
-    }
-
-    public void setHappiness(int happiness) {
-        this.happiness = happiness;
     }
     
     /**
@@ -152,6 +119,25 @@ public class Turtle implements Animal {
         System.out.println("Energy Level: " + energy);
         System.out.println("Happiness Level: " + happiness);
     }
+    
+    /**
+     * Returns the health of the turtle.
+     */
+    public int getHealth() {
+        return health;
+    }
+    
+    /**
+     * Returns the energy of the turtle.
+     */
+    public int getEnergy() {
+        return energy;
+    }
+    
+    /**
+     * Returns the happiness of the turtle.
+     */
+    public int getHappiness() {
+        return happiness;
+    }
 }
-
-
