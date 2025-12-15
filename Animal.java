@@ -5,4 +5,9 @@ public interface Animal {
     public void play();
     public void nothing();
     public void uniqueBehavior();
+    public int getHealth();
+    public int getEnergy();
+    public int getHappiness();
+    public void displayStatus();
 }
+
