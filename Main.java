@@ -81,6 +81,10 @@ public class main {
         System.out.println("Thank you for playing. Goodbye!");
     }
     
+    /**
+     * Displays the welcome message and pet selection menu
+     * at the start of the game.
+     */
     public static void welcome(){
         System.out.println("Welcome to the Virtual Pet Simulator!\nYou will get to take care of a marine animal! 🌊 ˖𓇼 ⋆🐚");
         System.out.println("Please adopt a pet turtle, dolphin, penguin, or otter today!!");
@@ -93,6 +97,10 @@ public class main {
         System.out.print("Enter number: ");
     }
 
+     /**
+     * Displays the action menu allowing the user
+     * to choose how to interact with their pet.
+     */
     public static void petMenu(){
         System.out.println(" ");
         System.out.println("What would you like to do with your pet? Please enter a number");
@@ -106,7 +114,14 @@ public class main {
         System.out.println("8. Kill 💀");
          System.out.println(" ");
     }
-    
+
+    /**
+     * Executes the selected action on the current pet.
+     *
+     * @param choiceAction the user's chosen action
+     * @param currentPet the pet being interacted with
+     * @return true to continue the game, false to end it
+     */
     public static boolean animalAction(int choiceAction, Animal currentPet) {
         switch (choiceAction) {
             case 1:
