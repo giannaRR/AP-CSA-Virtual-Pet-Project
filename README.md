@@ -1,5 +1,4 @@
 # Project Title: Under the Sea - Virtual Pet Simulator 
-# Team Members: Allison Ly  , Elena Koleva  , Gianna Rodriguez , Kayla To
 Team Member Roles:
 * Allison Ly (Lead Programmer)
 * Elena Koleva (Project Manager)
